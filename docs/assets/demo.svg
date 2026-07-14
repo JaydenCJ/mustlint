@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="420" viewBox="0 0 780 420" font-family="Menlo, Consolas, monospace" font-size="13">
+  <rect width="780" height="420" rx="10" fill="#101418"/>
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="390" y="27" fill="#8b949e" text-anchor="middle" font-size="12">mustlint — MUST/SHOULD discipline for Markdown specs</text>
+  <g fill="#c9d1d9">
+    <text x="24" y="62"><tspan fill="#7ee787">$</tspan> mustlint check examples/bad-spec.md</text>
+    <text x="24" y="94"><tspan fill="#8b949e">bad-spec.md:6:1</tspan>    <tspan fill="#d29922">warning</tspan>  <tspan fill="#d2a8ff">outdated-boilerplate</tspan>  adopt the BCP 14 (RFC 8174) boilerplate…</text>
+    <text x="24" y="116"><tspan fill="#8b949e">bad-spec.md:13:23</tspan>  <tspan fill="#f85149">error</tspan>    <tspan fill="#d2a8ff">mixed-case-keyword</tspan>    mixed-case "MUST not": write "MUST NOT"…</text>
+    <text x="24" y="138"><tspan fill="#8b949e">bad-spec.md:15:1</tspan>   <tspan fill="#f85149">error</tspan>    <tspan fill="#d2a8ff">duplicate-id</tspan>          REQ-2 is already defined at bad-spec.md:13:1…</text>
+    <text x="24" y="160"><tspan fill="#8b949e">bad-spec.md:15:21</tspan>  <tspan fill="#79c0ff">info</tspan>     <tspan fill="#d2a8ff">undeclared-keyword</tspan>    "SHALL" is not declared in the key-words list…</text>
+    <text x="24" y="182"><tspan fill="#8b949e">bad-spec.md:15:62</tspan>  <tspan fill="#d29922">warning</tspan>  <tspan fill="#d2a8ff">ambiguous-term</tspan>        "reasonable" — give the concrete bound you mean…</text>
+    <text x="24" y="204"><tspan fill="#8b949e">bad-spec.md:17:1</tspan>   <tspan fill="#79c0ff">info</tspan>     <tspan fill="#d2a8ff">id-gap</tspan>                series REQ jumps from REQ-2 to REQ-5…</text>
+    <text x="24" y="226"><tspan fill="#8b949e">bad-spec.md:17:20</tspan>  <tspan fill="#f85149">error</tspan>    <tspan fill="#d2a8ff">may-not</tspan>               "MAY NOT" is ambiguous: use "MUST NOT" to forbid…</text>
+    <text x="24" y="248"><tspan fill="#8b949e">bad-spec.md:21:9</tspan>   <tspan fill="#d29922">warning</tspan>  <tspan fill="#d2a8ff">pseudo-keyword</tspan>        "WILL" has no RFC 2119 meaning: use "MUST"…</text>
+    <text x="24" y="270"><tspan fill="#8b949e">bad-spec.md:23:16</tspan>  <tspan fill="#79c0ff">info</tspan>     <tspan fill="#d2a8ff">lowercase-keyword</tspan>     lowercase "should" is ambiguous under RFC 2119…</text>
+    <text x="24" y="304">1 file checked: <tspan fill="#f85149">9 findings</tspan> (3 errors, 3 warnings, 3 info)</text>
+    <text x="24" y="336"><tspan fill="#7ee787">$</tspan> mustlint check --require-ids examples/good-spec.md</text>
+    <text x="24" y="362">1 file checked: <tspan fill="#7ee787">no findings</tspan></text>
+    <text x="24" y="392"><tspan fill="#7ee787">$</tspan> echo $?  <tspan fill="#8b949e"># 0 — ready for the pre-merge gate</tspan></text>
+  </g>
+</svg>
